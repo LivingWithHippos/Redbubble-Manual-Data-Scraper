@@ -13,11 +13,11 @@ You can copy and paste the result where you want. You can easly remove or change
 
 If you want to create a CSV-compatible file create a new .csv file and put this at its top to give your columns a title
 ```
-Order Date;Ship Date;Work;Name;Order #;Product;Fulfillment Country;Destination Country;Destination State;Status;Qty;Retail Price*;Manufacturing Fee;Artist Margin
+Order Date;Ship Date;Work;Order #;Product;Fulfillment Country;Destination Country;Destination State;Status;Quantity;Retail Price;Manufacturing Fee;Artist Margin
 ```
 now put this string in the "List" field on regexr.com
 ```
-$1;$2;$3;"$4";$5;$6;$7;$8;$9;$11;$13;$14;$15;$16\n
+$1;$2;"$4";$5;$6;$7;$8;$9;$11;$13;$14;$15;$16\n
 ```
 copy and paste your result to the CSV file under the first row. 
 
@@ -32,7 +32,7 @@ If you encounter strange characters like `&#39;` you can replace them
 
 I used ; as separators in the CSV so if any of your results has a ";" it's going to break your import, but the "" I've put $4 in should have fixed this.
 
-You can replace the "." with "," in the earnings cell to make them recognized as numbers.
+You can replace the "." with "," in the earnings cell to make them recognized as numbers if you have such layout.
 
 Set the date columns as date when importing them.
 
